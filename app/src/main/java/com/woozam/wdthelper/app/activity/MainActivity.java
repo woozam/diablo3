@@ -16,6 +16,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -81,19 +82,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         DataManager.getInstance().addOnAddBattleTagListener(this);
 
-//        if (ADUtils.USE_AD) {
-//            String base64EncodedPublicKey = BillingUtils.getLicenseKey();
-//            mHelper = new IabHelper(this, base64EncodedPublicKey);
-//            mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
-//                public void onIabSetupFinished(IabResult result) {
-//                    if (!result.isSuccess()) {
-//                        Log.d(TAG, "Problem setting up In-app Billing: " + result);
-//                    } else {
-//                        checkRemoveAdsPurchased();
-//                    }
-//                }
-//            });
-//        }
+        if (ADUtils.USE_AD) {
+            String base64EncodedPublicKey = BillingUtils.getLicenseKey();
+            mHelper = new IabHelper(this, base64EncodedPublicKey);
+            mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
+                public void onIabSetupFinished(IabResult result) {
+                    if (!result.isSuccess()) {
+                        Log.d(TAG, "Problem setting up In-app Billing: " + result);
+                    } else {
+                        checkRemoveAdsPurchased();
+                    }
+                }
+            });
+        }
     }
 
     @Override
