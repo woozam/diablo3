@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/profile_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/profile_list_view"
+            style="@style/RHListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:drawSelectorOnTop="true"
+            android:listSelector="?attr/selectableItemBackground"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/profile_add_battle_tag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/bg_login"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/profile_add_battle_tag_server"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_edit_text_selector"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/profile_add_battle_tag_name"
+                android:layout_width="136dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/profile_add_battle_tag_server"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_edit_text_selector"
+                android:gravity="center_vertical"
+                android:hint="@string/battle_tag"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white_80"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/profile_add_battle_tag_sharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/profile_add_battle_tag_name"
+                android:layout_alignTop="@+id/profile_add_battle_tag_name"
+                android:layout_toLeftOf="@+id/profile_add_battle_tag_number"
+                android:layout_toRightOf="@+id/profile_add_battle_tag_name"
+                android:gravity="center"
+                android:text="@string/hash"
+                android:textColor="@color/white"
+                android:textSize="18dp"/>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/profile_add_battle_tag_number"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/profile_add_battle_tag"
+                android:layout_below="@+id/profile_add_battle_tag_server"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_edit_text_selector"
+                android:gravity="center_vertical"
+                android:hint="@string/battle_tag_number_hint"
+                android:inputType="number"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white_80"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/profile_add_battle_tag"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/profile_add_battle_tag_name"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_add_battle_tag_selector"
+                android:text="@string/add_battle_tag"
+                android:textColor="@color/white"
+                android:textSize="15dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

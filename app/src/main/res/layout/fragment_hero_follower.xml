@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1d1814">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <RelativeLayout
+            android:id="@+id/hero_follower_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#1d1814">
+
+            <TextView
+                android:id="@+id/hero_follower_enchantress_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/enchantress"
+                android:textColor="#f3e6d0"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:id="@+id/hero_follower_enchantress_screen_shot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:src="@mipmap/ic_center_focus_weak_white_24dp"/>
+
+            <View
+                android:id="@+id/hero_follower_enchantress_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/hero_follower_enchantress_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="#312a1e"/>
+
+            <com.woozam.wdthelper.app.view.FollowerLayout
+                android:id="@+id/hero_follower_enchantress_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hero_follower_enchantress_divider"
+                android:background="#1d1814"
+                android:padding="16dp"/>
+
+            <TextView
+                android:id="@+id/hero_follower_scoundrel_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hero_follower_enchantress_layout"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/scoundrel"
+                android:textColor="#f3e6d0"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:id="@+id/hero_follower_scoundrel_screen_shot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/hero_follower_enchantress_layout"
+                android:layout_marginRight="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:src="@mipmap/ic_center_focus_weak_white_24dp"/>
+
+            <View
+                android:id="@+id/hero_follower_scoundrel_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/hero_follower_scoundrel_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="#312a1e"/>
+
+            <com.woozam.wdthelper.app.view.FollowerLayout
+                android:id="@+id/hero_follower_scoundrel_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hero_follower_scoundrel_divider"
+                android:background="#1d1814"
+                android:padding="16dp"/>
+
+            <TextView
+                android:id="@+id/hero_follower_templar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hero_follower_scoundrel_layout"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/templar"
+                android:textColor="#f3e6d0"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:id="@+id/hero_follower_templar_screen_shot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/hero_follower_scoundrel_layout"
+                android:layout_marginRight="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:src="@mipmap/ic_center_focus_weak_white_24dp"/>
+
+            <View
+                android:id="@+id/hero_follower_templar_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/hero_follower_templar_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="#312a1e"/>
+
+            <com.woozam.wdthelper.app.view.FollowerLayout
+                android:id="@+id/hero_follower_templar_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hero_follower_templar_divider"
+                android:background="#1d1814"
+                android:padding="16dp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

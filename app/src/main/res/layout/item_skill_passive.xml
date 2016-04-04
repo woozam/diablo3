@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/skill_passive_image"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@mipmap/bg_brown"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/skill_passive_image_bg"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/bg_skill_passive_selector"/>
+
+    <RelativeLayout
+        android:id="@+id/skill_passive_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/skill_passive_image_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:id="@+id/skill_passive_content_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:text="-"
+            android:textColor="#f3e6d0"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+</RelativeLayout>

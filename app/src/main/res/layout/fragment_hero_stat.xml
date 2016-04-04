@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1d1814">
+
+    <RelativeLayout
+        android:id="@+id/hero_stat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1d1814"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/hero_stat_ability_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attributes"
+            android:textColor="#f3e6d0"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/hero_stat_ability_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/hero_stat_ability_title"
+            android:layout_marginTop="8dp"
+            android:background="#312a1e"/>
+
+        <TextView
+            android:id="@+id/hero_stat_ability_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_ability_divider"
+            android:layout_marginTop="8dp"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_ability_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/hero_stat_ability_divider"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_attack_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_ability_value"
+            android:layout_marginTop="16dp"
+            android:text="@string/offense"
+            android:textColor="#f3e6d0"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/hero_stat_attack_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/hero_stat_attack_title"
+            android:layout_marginTop="8dp"
+            android:background="#312a1e"/>
+
+        <TextView
+            android:id="@+id/hero_stat_attack_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_attack_divider"
+            android:layout_marginTop="8dp"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_attack_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/hero_stat_attack_divider"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_defense_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_attack_value"
+            android:layout_marginTop="16dp"
+            android:text="@string/defense"
+            android:textColor="#f3e6d0"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/hero_stat_defense_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/hero_stat_defense_title"
+            android:layout_marginTop="8dp"
+            android:background="#312a1e"/>
+
+        <TextView
+            android:id="@+id/hero_stat_defense_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_defense_divider"
+            android:layout_marginTop="8dp"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_defense_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/hero_stat_defense_divider"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_resist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_defense_value"
+            android:layout_marginTop="16dp"
+            android:text="@string/resistance"
+            android:textColor="#f3e6d0"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/hero_stat_resist_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/hero_stat_resist_title"
+            android:layout_marginTop="8dp"
+            android:background="#312a1e"/>
+
+        <TextView
+            android:id="@+id/hero_stat_resist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_resist_divider"
+            android:layout_marginTop="8dp"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_resist_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/hero_stat_resist_divider"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_vitality_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_resist_value"
+            android:layout_marginTop="16dp"
+            android:text="@string/life"
+            android:textColor="#f3e6d0"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/hero_stat_vitality_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/hero_stat_vitality_title"
+            android:layout_marginTop="8dp"
+            android:background="#312a1e"/>
+
+        <TextView
+            android:id="@+id/hero_stat_vitality_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_vitality_divider"
+            android:layout_marginTop="8dp"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_vitality_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/hero_stat_vitality_divider"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_adventure_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_vitality_value"
+            android:layout_marginTop="16dp"
+            android:text="@string/adventure"
+            android:textColor="#f3e6d0"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/hero_stat_adventure_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/hero_stat_adventure_title"
+            android:layout_marginTop="8dp"
+            android:background="#312a1e"/>
+
+        <TextView
+            android:id="@+id/hero_stat_adventure_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hero_stat_adventure_divider"
+            android:layout_marginTop="8dp"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/hero_stat_adventure_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/hero_stat_adventure_divider"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:textColor="#a99877"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+</ScrollView>

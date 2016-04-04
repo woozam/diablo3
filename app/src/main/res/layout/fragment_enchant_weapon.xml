@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1d1814">
+
+    <RelativeLayout
+        android:id="@+id/enchant_weapon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1d1814"
+        android:paddingBottom="24dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/enchant_weapon_current_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_weapon_info"
+            android:textColor="#f3e6d0"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/enchant_weapon_current_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/enchant_weapon_current_title"
+            android:layout_marginTop="8dp"
+            android:background="#312a1e"/>
+
+        <RelativeLayout
+            android:id="@+id/enchant_weapon_current_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enchant_weapon_current_divider"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:id="@+id/enchant_weapon_current_top_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/enchant_weapon_image"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/enchant_weapon_current_left_layout"
+                    android:layout_alignTop="@+id/enchant_weapon_current_left_layout"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/bg_weapon_empty"/>
+
+                <RelativeLayout
+                    android:id="@+id/enchant_weapon_current_left_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/enchant_weapon_image"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/enchant_weapon_type"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/bg_edit_text_selector"
+                        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/enchant_weapon_dps"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/enchant_weapon_type"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_edit_text_selector"
+                        android:gravity="center_vertical"
+                        android:hint="@string/damage_per_second"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="15dp"/>
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/enchant_weapon_attack_speed"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/enchant_weapon_dps"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_edit_text_selector"
+                        android:gravity="center_vertical"
+                        android:hint="@string/attack_per_second"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="15dp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/enchant_weapon_primary_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enchant_weapon_current_top_layout"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/primary"
+                android:textColor="#f3e6d0"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:id="@+id/enchant_weapon_primary_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/enchant_weapon_primary_title"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="8dp"
+                android:background="#312a1e"/>
+
+            <RelativeLayout
+                android:id="@+id/enchant_weapon_current_bottom_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enchant_weapon_primary_divider"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/enchant_weapon_current_bottom_left_layout"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/enchant_weapon_current_add_damage_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/weapon_damage"
+                        android:textColor="#a99877"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:id="@+id/enchant_weapon_current_damage_percent_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/enchant_weapon_current_add_damage_text"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/damage_percent"
+                        android:textColor="#a99877"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/enchant_weapon_current_damage_percent_text"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/attack_speed_percent"
+                        android:textColor="#a99877"
+                        android:textSize="14dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/enchant_weapon_current_bottom_right_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/enchant_weapon_current_bottom_left_layout">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/enchant_weapon_current_add_damage_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/enchant_weapon_current_damage_percent"
+                        android:layout_marginRight="6dp"
+                        android:layout_toLeftOf="@+id/enchant_weapon_current_damage_percent_s"
+                        android:background="@drawable/bg_edit_text_selector"
+                        android:gravity="center_vertical"
+                        android:hint="@string/min"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:id="@+id/enchant_weapon_current_damage_percent_s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/enchant_weapon_current_add_damage_min"
+                        android:layout_alignTop="@+id/enchant_weapon_current_add_damage_min"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="~"
+                        android:textColor="#a99877"
+                        android:textSize="18dp"/>
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/enchant_weapon_current_add_damage_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignRight="@+id/enchant_weapon_current_damage_percent"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@+id/enchant_weapon_current_damage_percent_s"
+                        android:background="@drawable/bg_edit_text_selector"
+                        android:gravity="center_vertical"
+                        android:hint="@string/max"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="15dp"/>
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/enchant_weapon_current_damage_percent"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/enchant_weapon_current_add_damage_min"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_edit_text_selector"
+                        android:gravity="center_vertical"
+                        android:hint="@string/damage_percent_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="15dp"/>
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/enchant_weapon_current_attack_speed_percent"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/enchant_weapon_current_damage_percent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_edit_text_selector"
+                        android:gravity="center_vertical"
+                        android:hint="@string/attack_speed_percent_hint"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="15dp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/enchant_weapon_preview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enchant_weapon_current_layout"
+            android:layout_marginTop="24dp"
+            android:text="@string/enchant_result"
+            android:textColor="#f3e6d0"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/enchant_weapon_preview_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/enchant_weapon_preview_title"
+            android:layout_marginTop="8dp"
+            android:background="#312a1e"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/enchant_weapon_ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enchant_weapon_preview_divider"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/ad_unit_id_enchant"/>
+
+        <RelativeLayout
+            android:id="@+id/enchant_weapon_preview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enchant_weapon_ad_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp">
+
+            <RelativeLayout
+                android:id="@+id/enchant_weapon_preview_bottom_left_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp">
+
+                <TextView
+                    android:id="@+id/enchant_weapon_preview_add_damage_max_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/weapon_damage_max"
+                    android:textColor="#a99877"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/enchant_weapon_preview_damage_percent_max_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/enchant_weapon_preview_add_damage_max_text"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/damage_percent_max"
+                    android:textColor="#a99877"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/enchant_weapon_preview_attack_speed_percent_max_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/enchant_weapon_preview_damage_percent_max_text"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/attack_speed_max"
+                    android:textColor="#a99877"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/enchant_weapon_preview_attack_speed_percent_to_damage_percent_max_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/enchant_weapon_preview_attack_speed_percent_max_text"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/attack_speed_to_damage_percent_max"
+                    android:textColor="#a99877"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/enchant_weapon_preview_damage_percent_to_attack_speed_percent_max_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/enchant_weapon_preview_attack_speed_percent_to_damage_percent_max_text"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/damage_percent_to_attack_speed_max"
+                    android:textColor="#a99877"
+                    android:textSize="14dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/enchant_weapon_preview_bottom_right_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/enchant_weapon_preview_bottom_left_layout"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/enchant_weapon_preview_add_damage_max"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_edit_text_selector"
+                    android:gravity="center"
+                    android:hint="@string/damage_per_second"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_80"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/enchant_weapon_preview_damage_percent_max"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/enchant_weapon_preview_add_damage_max"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_edit_text_selector"
+                    android:gravity="center"
+                    android:hint="@string/damage_per_second"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_80"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/enchant_weapon_preview_attack_speed_percent_max"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/enchant_weapon_preview_damage_percent_max"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_edit_text_selector"
+                    android:gravity="center"
+                    android:hint="@string/damage_per_second"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_80"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/enchant_weapon_preview_attack_speed_percent_to_damage_percent_max"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/enchant_weapon_preview_attack_speed_percent_max"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_edit_text_selector"
+                    android:gravity="center"
+                    android:hint="@string/damage_per_second"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_80"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/enchant_weapon_preview_damage_percent_to_attack_speed_percent_max"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/enchant_weapon_preview_attack_speed_percent_to_damage_percent_max"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_edit_text_selector"
+                    android:gravity="center"
+                    android:hint="@string/damage_per_second"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_80"
+                    android:textSize="15dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

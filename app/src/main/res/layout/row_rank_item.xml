@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+    <TextView
+        android:id="@+id/rank_item_rank"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="#a99877"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/rank_item_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@+id/rank_item_rank"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:id="@+id/rank_item_more"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@mipmap/ic_more_vert_white_24dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rank_item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_toLeftOf="@+id/rank_item_more"
+        android:layout_toRightOf="@+id/rank_item_image"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/rank_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@+id/rank_item_rift_time"
+            android:drawablePadding="4dp"
+            android:singleLine="true"
+            android:textColor="#ad835a"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/rank_item_rift_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="4dp"
+            android:textColor="#a99877"
+            android:textSize="13dp"/>
+
+        <TextView
+            android:id="@+id/rank_item_completed_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rank_item_name"
+            android:textColor="#a99877"
+            android:textSize="13dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

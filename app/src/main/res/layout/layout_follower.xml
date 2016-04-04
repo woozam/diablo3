@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/follower_item_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <com.woozam.wdthelper.app.view.ItemBGView
+            android:id="@+id/follower_item_special_bg"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="48dp"
+            android:scaleType="fitXY"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/follower_item_special"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="48dp"
+            android:scaleType="fitCenter"/>
+
+        <com.woozam.wdthelper.app.view.ItemBGView
+            android:id="@+id/follower_item_neck_bg"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/follower_item_special_bg"
+            android:scaleType="fitXY"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/follower_item_neck"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/follower_item_special_bg"
+            android:scaleType="fitCenter"/>
+
+        <com.woozam.wdthelper.app.view.ItemBGView
+            android:id="@+id/follower_item_main_hand_bg"
+            android:layout_width="76dp"
+            android:layout_height="156dp"
+            android:layout_below="@+id/follower_item_special_bg"
+            android:layout_marginTop="4dp"
+            android:scaleType="fitXY"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/follower_item_main_hand"
+            android:layout_width="76dp"
+            android:layout_height="156dp"
+            android:layout_below="@+id/follower_item_special_bg"
+            android:layout_marginTop="4dp"
+            android:scaleType="fitCenter"/>
+
+        <com.woozam.wdthelper.app.view.ItemBGView
+            android:id="@+id/follower_item_off_hand_bg"
+            android:layout_width="76dp"
+            android:layout_height="156dp"
+            android:layout_below="@+id/follower_item_special_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/follower_item_main_hand_bg"
+            android:scaleType="fitXY"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/follower_item_off_hand"
+            android:layout_width="76dp"
+            android:layout_height="156dp"
+            android:layout_below="@+id/follower_item_special_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/follower_item_main_hand_bg"
+            android:scaleType="fitCenter"/>
+
+        <com.woozam.wdthelper.app.view.ItemBGView
+            android:id="@+id/follower_item_left_finger_bg"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/follower_item_special_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/follower_item_off_hand_bg"
+            android:scaleType="fitXY"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/follower_item_left_finger"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/follower_item_special_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/follower_item_off_hand_bg"
+            android:scaleType="fitCenter"/>
+
+        <com.woozam.wdthelper.app.view.ItemBGView
+            android:id="@+id/follower_item_right_finger_bg"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/follower_item_left_finger_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/follower_item_off_hand_bg"
+            android:scaleType="fitXY"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/follower_item_right_finger"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/follower_item_left_finger_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/follower_item_off_hand_bg"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/follower_gold_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/follower_item_left_finger_bg"
+            android:singleLine="true"
+            android:text="-"
+            android:textColor="#f3e6d0"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/follower_gold_find_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/follower_gold_find"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/follower_item_left_finger_bg"
+            android:singleLine="true"
+            android:text="@string/stat_gold_find"
+            android:textColor="#796d55"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/follower_magic_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/follower_gold_find_name"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/follower_item_left_finger_bg"
+            android:singleLine="true"
+            android:text="-"
+            android:textColor="#f3e6d0"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/follower_magic_find_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/follower_magic_find"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/follower_item_left_finger_bg"
+            android:singleLine="true"
+            android:text="@string/stat_magic_find"
+            android:textColor="#796d55"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/follower_experience_bonus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/follower_magic_find_name"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/follower_item_left_finger_bg"
+            android:singleLine="true"
+            android:text="-"
+            android:textColor="#f3e6d0"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/follower_experience_bonus_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/follower_experience_bonus"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/follower_item_left_finger_bg"
+            android:singleLine="true"
+            android:text="@string/experience_bonus"
+            android:textColor="#796d55"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/follower_skill_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/follower_item_layout"
+        android:layout_marginTop="8dp"
+        android:weightSum="2">
+
+        <com.woozam.wdthelper.app.view.SkillActiveItem
+            android:id="@+id/follower_skill_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            app:rune="false"/>
+
+        <com.woozam.wdthelper.app.view.SkillActiveItem
+            android:id="@+id/follower_skill_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            app:rune="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/follower_skill_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/follower_skill_line_1"
+        android:layout_marginTop="8dp"
+        android:weightSum="2">
+
+        <com.woozam.wdthelper.app.view.SkillActiveItem
+            android:id="@+id/follower_skill_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            app:rune="false"/>
+
+        <com.woozam.wdthelper.app.view.SkillActiveItem
+            android:id="@+id/follower_skill_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            app:rune="false"/>
+    </LinearLayout>
+
+</merge>

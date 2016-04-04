@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/bg_career"
+                android:padding="16dp">
+
+    <RelativeLayout
+        android:id="@+id/career_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/career_monsters_image"
+            android:layout_width="38dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="4dp"
+            android:src="@mipmap/img_career_monsters"/>
+
+        <ImageView
+            android:id="@+id/career_elites_image"
+            android:layout_width="38dp"
+            android:layout_height="44dp"
+            android:layout_below="@+id/career_monsters_image"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/img_career_elites"/>
+
+        <ImageView
+            android:id="@+id/career_paragon_image"
+            android:layout_width="38dp"
+            android:layout_height="44dp"
+            android:layout_below="@+id/career_elites_image"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/img_career_paragon"/>
+
+        <TextView
+            android:id="@+id/career_monsters_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/career_monsters_image"
+            android:textColor="#a99877"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/career_monsters_count_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/career_monsters_count"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/career_monsters_image"
+            android:text="@string/lifetime_kills"
+            android:textColor="#a99877"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/career_elites_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/career_monsters_image"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/career_elites_image"
+            android:textColor="#a99877"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/career_elites_count_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/career_elites_count"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/career_elites_image"
+            android:text="@string/elite_kills"
+            android:textColor="#a99877"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/career_paragon_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/career_elites_image"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/career_paragon_image"
+            android:textColor="#a99877"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/career_paragon_level_hardcore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/career_elites_image"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/career_paragon_level"
+            android:textColor="#ffa20101"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/career_paragon_level_season"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/career_elites_image"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/career_paragon_level_hardcore"
+            android:drawableRight="@mipmap/img_seasonal_leaf"
+            android:textColor="#a99877"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/career_paragon_level_season_hardcore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/career_elites_image"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/career_paragon_level_season"
+            android:drawableRight="@mipmap/img_seasonal_leaf"
+            android:textColor="#ffa20101"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/career_paragon_level_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/career_paragon_level"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/career_paragon_image"
+            android:text="@string/paragon_level"
+            android:textColor="#a99877"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

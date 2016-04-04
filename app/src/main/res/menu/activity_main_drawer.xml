@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_favorite"
+            android:icon="@mipmap/ic_star_border_black_36dp"
+            android:title="@string/favorite"/>
+        <item
+            android:id="@+id/nav_ranking"
+            android:icon="@mipmap/ic_equalizer_black_36dp"
+            android:title="@string/ranking"/>
+        <item
+            android:id="@+id/nav_enchant"
+            android:icon="@mipmap/ic_build_black_36dp"
+            android:title="@string/enchant"/>
+        <item
+            android:id="@+id/nav_bonus_bounty_order"
+            android:icon="@mipmap/ic_pin_drop_black_36dp"
+            android:title="@string/bonus_bounty_order"/>
+    </group>
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_remove_ad"
+            android:icon="@mipmap/ic_lock_open_black_36dp"
+            android:title="@string/remove_ad"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_suggestion"
+            android:icon="@mipmap/ic_feedback_black_36dp"
+            android:title="@string/suggestion"/>
+    </group>
+
+</menu>
