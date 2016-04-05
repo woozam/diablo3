@@ -158,4 +158,7 @@
     <string name="bonus_bounty_order_time_pm">오후 %02d</string>
     <string name="current">현재</string>
     <string name="show_notification">상태창에 표시</string>
+    <string name="weapon_information">무기 정보</string>
+    <string name="remove_damage_percent">피해 제거</string>
+    <string name="remove_attach_speed">공격 속도 제거</string>
 </resources>

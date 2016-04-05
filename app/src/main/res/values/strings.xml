@@ -167,4 +167,7 @@
     <string name="bonus_bounty_order_time_pm">%02d PM</string>
     <string name="current">Current</string>
     <string name="show_notification">Show Notification</string>
+    <string name="weapon_information">Weapon Information</string>
+    <string name="remove_damage_percent">Remove Damage Increment</string>
+    <string name="remove_attach_speed">Remove Attack Speed Increment</string>
 </resources>

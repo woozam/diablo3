@@ -29,7 +29,7 @@ public class RankingFilterDialog extends AlertDialog {
     private CheckBox mHardcoreCheckBox;
 
     public RankingFilterDialog(Context context, OnClickListener onClickListener) {
-        super(context, R.style.AlertDialog);
+        super(context);
         LayoutInflater inflater = LayoutInflater.from(getContext());
         View view = inflater.inflate(R.layout.dialog_ranking_filter, null);
         mServerSpiner = (AppCompatSpinner) view.findViewById(R.id.filter_server);

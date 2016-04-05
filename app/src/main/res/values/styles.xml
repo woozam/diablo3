@@ -8,6 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:progressBarStyle">@style/D3Progress</item>
         <item name="progressBarStyle">@style/D3Progress</item>
+        <item name="android:alertDialogTheme">@style/AppTheme.Dialog</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog</item>
+
+        <item name="md_title_color">#f3e6d0</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="AppTheme">
@@ -26,12 +30,14 @@
         <item name="android:listSelector">#00000000</item>
     </style>
 
-    <style name="AlertDialog" parent="Theme.AppCompat.Dialog.Alert">
+    <style name="AppTheme.Dialog" parent="Theme.AppCompat.Dialog.Alert">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:progressBarStyle">@style/D3Progress</item>
         <item name="progressBarStyle">@style/D3Progress</item>
+        <item name="android:textColor">#f3e6d0</item>
+        <item name="android:textColorPrimary">#757575</item>
     </style>
 
     <style name="TooltipDialog" parent="Theme.AppCompat.Light.Dialog">

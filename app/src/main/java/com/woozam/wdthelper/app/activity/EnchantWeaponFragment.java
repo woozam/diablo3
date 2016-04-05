@@ -14,16 +14,18 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.afollestad.materialdialogs.MaterialDialog.Builder;
 import com.google.android.gms.ads.AdView;
 import com.woozam.wdthelper.D3Application;
 import com.woozam.wdthelper.R;
-import com.woozam.wdthelper.analystics.Analystics;
 import com.woozam.wdthelper.common.ADUtils;
 import com.woozam.wdthelper.common.ScreenShotTask;
 
@@ -33,7 +35,7 @@ import java.util.Collection;
 /**
  * Created by woozam on 2016-02-06.
  */
-public class EnchantWeaponFragment extends Fragment implements TextWatcher, AdapterView.OnItemSelectedListener {
+public class EnchantWeaponFragment extends Fragment implements TextWatcher, OnItemSelectedListener, OnClickListener {
 
     private static final int DAMAGE_MIN_ONE_HAND = 1199;
     private static final int DAMAGE_MAX_ONE_HAND = 1490;
@@ -89,12 +91,18 @@ public class EnchantWeaponFragment extends Fragment implements TextWatcher, Adap
 
     private View mWeaponResultAttackSpeedPercentToDamagePercentText;
     private View mWeaponResultDamagePercentToAttackSpeedPercentText;
+    private View mWeaponResultRemoveDamagePercentText;
+    private View mWeaponResultRemoveAttackSpeedPercentText;
 
     private TextView mWeaponResultDamage;
     private TextView mWeaponResultDamagePercent;
     private TextView mWeaponResultAttackSpeedPercent;
     private TextView mWeaponResultAttackSpeedPercentToDamagePercent;
     private TextView mWeaponResultDamagePercentToAttackSpeedPercent;
+    private TextView mWeaponResultRemoveDamagePercent;
+    private TextView mWeaponResultRemoveAttackSpeedPercent;
+
+    private View mHelp;
 
     private AdView mAdView;
 
@@ -122,11 +130,16 @@ public class EnchantWeaponFragment extends Fragment implements TextWatcher, Adap
         mWeaponAttackSpeedPercent = (AppCompatEditText) mRoot.findViewById(R.id.enchant_weapon_current_attack_speed_percent);
         mWeaponResultAttackSpeedPercentToDamagePercentText = mRoot.findViewById(R.id.enchant_weapon_preview_attack_speed_percent_to_damage_percent_max_text);
         mWeaponResultDamagePercentToAttackSpeedPercentText = mRoot.findViewById(R.id.enchant_weapon_preview_damage_percent_to_attack_speed_percent_max_text);
+        mWeaponResultRemoveDamagePercentText = mRoot.findViewById(R.id.enchant_weapon_preview_remove_damage_percent_text);
+        mWeaponResultRemoveAttackSpeedPercentText = mRoot.findViewById(R.id.enchant_weapon_preview_remove_attack_speed_percent_text);
         mWeaponResultDamage = (TextView) mRoot.findViewById(R.id.enchant_weapon_preview_add_damage_max);
         mWeaponResultDamagePercent = (TextView) mRoot.findViewById(R.id.enchant_weapon_preview_damage_percent_max);
         mWeaponResultAttackSpeedPercent = (TextView) mRoot.findViewById(R.id.enchant_weapon_preview_attack_speed_percent_max);
         mWeaponResultAttackSpeedPercentToDamagePercent = (TextView) mRoot.findViewById(R.id.enchant_weapon_preview_attack_speed_percent_to_damage_percent_max);
         mWeaponResultDamagePercentToAttackSpeedPercent = (TextView) mRoot.findViewById(R.id.enchant_weapon_preview_damage_percent_to_attack_speed_percent_max);
+        mWeaponResultRemoveDamagePercent = (TextView) mRoot.findViewById(R.id.enchant_weapon_preview_remove_damage_percent);
+        mWeaponResultRemoveAttackSpeedPercent = (TextView) mRoot.findViewById(R.id.enchant_weapon_preview_remove_attack_speed_percent);
+        mHelp = mRoot.findViewById(R.id.enchant_weapon_help);
         mAdView = (AdView) mRoot.findViewById(R.id.enchant_weapon_ad_view);
         if (!ADUtils.USE_AD) {
             mAdView.setVisibility(View.GONE);
@@ -151,6 +164,7 @@ public class EnchantWeaponFragment extends Fragment implements TextWatcher, Adap
         mWeaponAddDamageMax.addTextChangedListener(this);
         mWeaponDamagePercent.addTextChangedListener(this);
         mWeaponAttackSpeedPercent.addTextChangedListener(this);
+        mHelp.setOnClickListener(this);
         return mRoot;
     }
 
@@ -187,6 +201,13 @@ public class EnchantWeaponFragment extends Fragment implements TextWatcher, Adap
             }
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == mHelp) {
+            new Builder(getContext()).title(R.string.weapon_information).customView(R.layout.enchant_weapon_help, true).positiveText(R.string.ok).show();
+        }
     }
 
     @Override
@@ -238,6 +259,22 @@ public class EnchantWeaponFragment extends Fragment implements TextWatcher, Adap
                 mWeaponResultAttackSpeedPercentToDamagePercent.setVisibility(View.GONE);
             }
 
+            if (damagePercent != 1) {
+                mWeaponResultRemoveDamagePercentText.setVisibility(View.VISIBLE);
+                mWeaponResultRemoveDamagePercent.setVisibility(View.VISIBLE);
+            } else {
+                mWeaponResultRemoveDamagePercentText.setVisibility(View.GONE);
+                mWeaponResultRemoveDamagePercent.setVisibility(View.GONE);
+            }
+
+            if (attackSpeedPercent != 1) {
+                mWeaponResultRemoveAttackSpeedPercentText.setVisibility(View.VISIBLE);
+                mWeaponResultRemoveAttackSpeedPercent.setVisibility(View.VISIBLE);
+            } else {
+                mWeaponResultRemoveAttackSpeedPercentText.setVisibility(View.GONE);
+                mWeaponResultRemoveAttackSpeedPercent.setVisibility(View.GONE);
+            }
+
             float defaultDsp = dsp / damagePercent / attackSpeed - (addDamageMax + addDamageMin) / 2;
             float defaultAttackSpeed = attackSpeed / attackSpeedPercent;
 
@@ -251,12 +288,16 @@ public class EnchantWeaponFragment extends Fragment implements TextWatcher, Adap
             float result3 = Math.round((defaultDsp + (addDamageMin + addDamageMax) / 2) * defaultAttackSpeed * damagePercent * previewAttackSpeedPercent * 10) / 10f;
             float result4 = Math.round((defaultDsp + (addDamageMin + addDamageMax) / 2) * defaultAttackSpeed * previewDamagePercent * 1 * 10) / 10f;
             float result5 = Math.round((defaultDsp + (addDamageMin + addDamageMax) / 2) * defaultAttackSpeed * 1 * previewAttackSpeedPercent * 10) / 10f;
+            float result6 = Math.round((defaultDsp + (addDamageMin + addDamageMax) / 2) * defaultAttackSpeed * 1 * attackSpeedPercent * 10) / 10f;
+            float result7 = Math.round((defaultDsp + (addDamageMin + addDamageMax) / 2) * defaultAttackSpeed * 1 * damagePercent * 10) / 10f;
 
             mWeaponResultDamage.setText(String.valueOf(result1));
             mWeaponResultDamagePercent.setText(String.valueOf(result2));
             mWeaponResultAttackSpeedPercent.setText(String.valueOf(result3));
             mWeaponResultAttackSpeedPercentToDamagePercent.setText(String.valueOf(result4));
             mWeaponResultDamagePercentToAttackSpeedPercent.setText(String.valueOf(result5));
+            mWeaponResultRemoveDamagePercent.setText(String.valueOf(result6));
+            mWeaponResultRemoveAttackSpeedPercent.setText(String.valueOf(result7));
         } catch (Exception ignored) {
         }
     }
