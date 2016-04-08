@@ -158,12 +158,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             RankingsActivity.createInstance(this);
         } else if (id == R.id.nav_enchant) {
             EnchantActivity.createInstance(this);
+        } else if (id == R.id.nav_bonus_bounty_order) {
+            BonusBountyOrderActivity.createInstance(this);
+        } else if (id == R.id.nav_calculator) {
+            CalculatorActivity.createInstance(this);
         } else if (id == R.id.nav_remove_ad) {
             purchaseRemoveAds();
         } else if (id == R.id.nav_suggestion) {
             Email.sendEmail(this);
-        } else if (id == R.id.nav_bonus_bounty_order) {
-            BonusBountyOrderActivity.createInstance(this);
+        } else if (id == R.id.nav_about) {
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

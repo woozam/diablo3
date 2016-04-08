@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp">
+
+    <TextView
+        android:id="@+id/calculator_dps_name"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:textColor="#ad835a"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/calculator_dps_value"
+            android:layout_width="136dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_edit_text_selector"
+            android:gravity="center_vertical|right"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white_80"
+            android:textSize="15dp"/>
+
+        <ImageView
+            android:id="@+id/calculator_dps_remove"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/calculator_dps_value"
+            android:background="?selectableItemBackground"
+            android:padding="8dp"
+            android:src="@mipmap/ic_remove_circle_outline_white_36dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

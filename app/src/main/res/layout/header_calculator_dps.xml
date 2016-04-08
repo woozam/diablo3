@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1d1814"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:id="@+id/calculator_main_stat_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/current_hero_info"
+            android:textColor="#f3e6d0"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/calculator_dps_header_help"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:background="?selectableItemBackground"
+            android:padding="8dp"
+            android:src="@mipmap/ic_help_outline_white_36dp"
+            android:text="@string/view_details"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/calculator_main_stat_header_main_stat"
+        layout="@layout/row_calculator_dps"/>
+
+    <include
+        android:id="@+id/calculator_main_stat_header_attack_speed"
+        layout="@layout/row_calculator_dps"/>
+
+    <include
+        android:id="@+id/calculator_main_stat_header_critical_chance"
+        layout="@layout/row_calculator_dps"/>
+
+    <include
+        android:id="@+id/calculator_main_stat_header_critical_damage"
+        layout="@layout/row_calculator_dps"/>
+
+    <include
+        android:id="@+id/calculator_main_stat_header_dps"
+        layout="@layout/row_calculator_dps"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1d1814"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/calculator_main_stat_header_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/add_damage"
+            android:textColor="#f3e6d0"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+</LinearLayout>

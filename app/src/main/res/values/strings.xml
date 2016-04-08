@@ -170,4 +170,10 @@
     <string name="weapon_information">Weapon Information</string>
     <string name="remove_damage_percent">Remove Damage Increment</string>
     <string name="remove_attach_speed">Remove Attack Speed Increment</string>
+    <string name="calculator">Calculator</string>
+    <string name="about">About</string>
+    <string name="add">ADD</string>
+    <string name="add_damage">Add Damage</string>
+    <string name="current_hero_info">Current Hero Information</string>
+    <string name="dps">DPS</string>
 </resources>

@@ -161,4 +161,10 @@
     <string name="weapon_information">무기 정보</string>
     <string name="remove_damage_percent">피해 제거</string>
     <string name="remove_attach_speed">공격 속도 제거</string>
+    <string name="calculator">계산기</string>
+    <string name="about">앱 정보</string>
+    <string name="add">추가</string>
+    <string name="add_damage">공격력 추가</string>
+    <string name="current_hero_info">현재 영웅 정보</string>
+    <string name="dps">DPS</string>
 </resources>

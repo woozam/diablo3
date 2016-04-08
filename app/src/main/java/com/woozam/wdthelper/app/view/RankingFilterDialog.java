@@ -22,9 +22,9 @@ import com.woozam.wdthelper.data.Server;
  */
 public class RankingFilterDialog extends AlertDialog {
 
-    private AppCompatSpinner mServerSpiner;
-    private AppCompatSpinner mTypeSpiner;
-    private AppCompatSpinner mSeasonSpiner;
+    private AppCompatSpinner mServerSpinner;
+    private AppCompatSpinner mTypeSpinner;
+    private AppCompatSpinner mSeasonSpinner;
     private CheckBox mSeasonCheckBox;
     private CheckBox mHardcoreCheckBox;
 
@@ -32,12 +32,12 @@ public class RankingFilterDialog extends AlertDialog {
         super(context);
         LayoutInflater inflater = LayoutInflater.from(getContext());
         View view = inflater.inflate(R.layout.dialog_ranking_filter, null);
-        mServerSpiner = (AppCompatSpinner) view.findViewById(R.id.filter_server);
-        mServerSpiner.setAdapter(new ServerSpinnerAdapter(getContext(), Server.toArrayList()));
-        mTypeSpiner = (AppCompatSpinner) view.findViewById(R.id.filter_type);
-        mTypeSpiner.setAdapter(new RiftTypeSpinnerAdapter(getContext(), RiftType.toArrayList()));
-        mSeasonSpiner = (AppCompatSpinner) view.findViewById(R.id.filter_season);
-        mSeasonSpiner.setAdapter(new RiftSeasonSpinnerAdapter(getContext(), RiftSeason.toArrayList()));
+        mServerSpinner = (AppCompatSpinner) view.findViewById(R.id.filter_server);
+        mServerSpinner.setAdapter(new ServerSpinnerAdapter(getContext(), Server.toArrayList()));
+        mTypeSpinner = (AppCompatSpinner) view.findViewById(R.id.filter_type);
+        mTypeSpinner.setAdapter(new RiftTypeSpinnerAdapter(getContext(), RiftType.toArrayList()));
+        mSeasonSpinner = (AppCompatSpinner) view.findViewById(R.id.filter_season);
+        mSeasonSpinner.setAdapter(new RiftSeasonSpinnerAdapter(getContext(), RiftSeason.toArrayList()));
         mSeasonCheckBox = (CheckBox) view.findViewById(R.id.filter_is_season);
         mHardcoreCheckBox = (CheckBox) view.findViewById(R.id.filter_is_hardcore);
         setView(view);
@@ -47,18 +47,18 @@ public class RankingFilterDialog extends AlertDialog {
 
     public RankingParameter getParameter() {
         RankingParameter params = new RankingParameter();
-        params.server = (Server) mServerSpiner.getSelectedItem();
-        params.type = (RiftType) mTypeSpiner.getSelectedItem();
-        params.season = (RiftSeason) mSeasonSpiner.getSelectedItem();
+        params.server = (Server) mServerSpinner.getSelectedItem();
+        params.type = (RiftType) mTypeSpinner.getSelectedItem();
+        params.season = (RiftSeason) mSeasonSpinner.getSelectedItem();
         params.isSeason = mSeasonCheckBox.isChecked();
         params.isHardcore = mHardcoreCheckBox.isChecked();
         return params;
     }
 
     public RankingFilterDialog setParameter(RankingParameter params) {
-        mServerSpiner.setSelection(Server.toArrayList().indexOf(params.server));
-        mTypeSpiner.setSelection(RiftType.toArrayList().indexOf(params.type));
-        mSeasonSpiner.setSelection(RiftSeason.toArrayList().indexOf(params.season));
+        mServerSpinner.setSelection(Server.toArrayList().indexOf(params.server));
+        mTypeSpinner.setSelection(RiftType.toArrayList().indexOf(params.type));
+        mSeasonSpinner.setSelection(RiftSeason.toArrayList().indexOf(params.season));
         mSeasonCheckBox.setChecked(params.isSeason);
         mHardcoreCheckBox.setChecked(params.isHardcore);
         return this;

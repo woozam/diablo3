@@ -71,6 +71,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name="com.woozam.wdthelper.app.activity.CalculatorActivity"
+            android:configChanges="keyboardHidden"
+            android:label="@string/calculator"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
 
         <receiver android:name=".app.broadcastReceiver.BootCompleteReceiver">
             <intent-filter>
