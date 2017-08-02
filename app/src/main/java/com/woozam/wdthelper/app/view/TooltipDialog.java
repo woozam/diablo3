@@ -94,6 +94,7 @@ public class TooltipDialog extends Dialog implements Response.ErrorListener, Res
     @Override
     public void onResponse(String response) {
         response = response.replace("d3-tooltip-item-wrapper-AncientLegendary", "");
+        response = response.replace("d3-tooltip-item-wrapper-PrimalAncientLegendary", "");
         response = response.replaceAll("class=\"tooltip-head +tooltip-head-.*\"", "style=\"height: 40px; padding: 0 15px; text-align: center; font-size: 18px;\"");
         String html = "<script src=\"http://" + mBattleTag.getServer().toString() + ".battle.net/d3/static/js/tooltips.js\"></script>" + response;
         mWebView.loadData(html, "text/html; charset=UTF-8", null);

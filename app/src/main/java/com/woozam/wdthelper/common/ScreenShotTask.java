@@ -2,6 +2,8 @@ package com.woozam.wdthelper.common;
 
 import android.Manifest.permission;
 import android.app.Activity;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -37,7 +39,14 @@ public class ScreenShotTask extends AsyncTask<Void, Void, Void> {
     public ScreenShotTask(View view, String title, String description) {
         if (VERSION.SDK_INT >= 23) {
             if (PermissionChecker.checkSelfPermission(D3Application.getContext(), permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                ((Activity) view.getContext()).requestPermissions(new String[]{permission.WRITE_EXTERNAL_STORAGE}, 0);
+                Activity activity = null;
+                Context context = view.getContext();
+                if (context instanceof Activity) {
+                    activity = (Activity) context;
+                } else {
+                    activity = (Activity) ((ContextWrapper) context).getBaseContext();
+                }
+                activity.requestPermissions(new String[]{permission.WRITE_EXTERNAL_STORAGE}, 0);
                 cancel(true);
                 Toast.makeText(view.getContext(), R.string.need_permission, Toast.LENGTH_SHORT).show();
                 return;
