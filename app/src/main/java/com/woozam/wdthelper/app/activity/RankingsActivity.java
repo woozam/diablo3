@@ -245,40 +245,44 @@ public class RankingsActivity extends AppCompatActivity implements Response.Erro
                 Elements elements = document.getElementById("ladders-table").getElementsByTag("tbody").get(0).children();
                 String lastRank = "";
                 for (Element element : elements) {
-                    Elements data = element.children();
-                    Element data0 = data.get(0);
-                    Element data1 = data.get(1);
-                    Element data2 = data.get(2);
-                    Element data3 = data.get(3);
-                    Element data4 = data.get(4);
-                    String rank = data0.text();
-                    if (TextUtils.isEmpty(rank)) {
-                        rank = lastRank;
-                    } else {
-                        lastRank = rank;
-                    }
-                    String name = data1.text();
-                    String battleTag = data1.getElementsByAttribute("href").get(0).attr("href");
-                    String icon = data1.getElementsByAttribute("src").get(0).attr("src").replace("/21/", "/64/");
-                    int riftLevel = Integer.parseInt(data2.text());
-                    String riftTime = data3.text();
-                    String completedTime = data4.text();
-                    RankItem rankItem = new RankItem();
-                    rankItem.setRank(rank);
-                    rankItem.setName(name);
-                    rankItem.setBattleTag(new BattleTag(battleTag.split("/")[4], mServer));
-                    rankItem.setHeroId(Long.parseLong(battleTag.split("/")[6]));
-                    rankItem.setIcon(icon);
-                    rankItem.setRiftLevel(riftLevel);
-                    rankItem.setRiftTime(riftTime);
-                    rankItem.setCompletedTime(completedTime);
-                    rankItemList.add(rankItem);
-                    if (i >= 99) {
-                        i = 0;
-                        publishProgress(rankItemList);
-                        rankItemList = new ArrayList<>();
-                    } else {
-                        i++;
+                    try {
+                        Elements data = element.children();
+                        Element data0 = data.get(0);
+                        Element data1 = data.get(1);
+                        Element data2 = data.get(2);
+                        Element data3 = data.get(3);
+                        Element data4 = data.get(4);
+                        String rank = data0.text();
+                        if (TextUtils.isEmpty(rank)) {
+                            rank = lastRank;
+                        } else {
+                            lastRank = rank;
+                        }
+                        String name = data1.text();
+                        String battleTag = data1.getElementsByAttribute("href").get(0).attr("href");
+                        String icon = data1.getElementsByAttribute("src").get(0).attr("src").replace("/21/", "/64/");
+                        int riftLevel = Integer.parseInt(data2.text());
+                        String riftTime = data3.text();
+                        String completedTime = data4.text();
+                        RankItem rankItem = new RankItem();
+                        rankItem.setRank(rank);
+                        rankItem.setName(name);
+                        rankItem.setBattleTag(new BattleTag(battleTag.split("/")[4], mServer));
+                        rankItem.setHeroId(Long.parseLong(battleTag.split("/")[6]));
+                        rankItem.setIcon(icon);
+                        rankItem.setRiftLevel(riftLevel);
+                        rankItem.setRiftTime(riftTime);
+                        rankItem.setCompletedTime(completedTime);
+                        rankItemList.add(rankItem);
+                        if (i >= 99) {
+                            i = 0;
+                            publishProgress(rankItemList);
+                            rankItemList = new ArrayList<>();
+                        } else {
+                            i++;
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                 }
                 return rankItemList;
