@@ -88,6 +88,7 @@
     <string name="monk">수도사</string>
     <string name="witch_doctor">부두술사</string>
     <string name="wizard">마법사</string>
+    <string name="necromancer">강령술사</string>
     <string name="europe">유럽</string>
     <string name="korea">한국</string>
     <string name="taiwan">대만</string>
@@ -139,6 +140,9 @@
     <string name="season_3">시즌 3</string>
     <string name="season_4">시즌 4</string>
     <string name="season_5">시즌 5</string>
+    <string name="season_6">시즌 6</string>
+    <string name="season_7">시즌 7</string>
+    <string name="season_8">시즌 8</string>
     <string name="greater_rift_2_player">2인 대균열</string>
     <string name="greater_rift_3_player">3인 대균열</string>
     <string name="greater_rift_4_player">4인 대균열</string>
@@ -148,6 +152,7 @@
     <string name="greater_rift_monk">수도사 대균열</string>
     <string name="greater_rift_witch_doctor">부두술사 대균열</string>
     <string name="greater_rift_wizard">마법사 대균열</string>
+    <string name="greater_rift_necromancer">강령술사 대균열</string>
     <string name="greater_rift_tier">%1$s\n%2$d단계</string>
     <string name="armor">방어도</string>
     <string name="damage">공격력</string>

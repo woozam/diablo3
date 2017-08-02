@@ -170,6 +170,12 @@ public class Hero extends AbsData implements Serializable {
                 } else {
                     return R.mipmap.img_wz_female_large;
                 }
+            case HeroClass.NE:
+                if (gender == 0) {
+
+                } else {
+
+                }
             default:
                 return 0;
         }

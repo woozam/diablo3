@@ -11,6 +11,8 @@ import com.woozam.wdthelper.R;
 import com.woozam.wdthelper.data.Hero;
 import com.woozam.wdthelper.data.HeroClass;
 
+import java.util.Locale;
+
 /**
  * Created by woozam on 2016-01-31.
  */
@@ -83,7 +85,7 @@ public class HeroAdapter extends D3BaseAdapter {
             mName.setText(hero.getName());
             mName.setCompoundDrawablesWithIntrinsicBounds(0, 0, hero.isSeasonal() ? R.mipmap.img_seasonal_leaf : 0, 0);
             mName.setTextColor(hero.isHardcore() ? 0xffa20101 : 0xffad835a);
-            mClass.setText(String.format("%s (%d)", HeroClass.getHeroClass(hero.getHeroClass(), hero.getGender()).toString(), hero.getLevel()));
+            mClass.setText(String.format(Locale.getDefault(), "%s (%d)", HeroClass.getHeroClass(hero.getHeroClass(), hero.getGender()).toString(), hero.getLevel()));
         }
     }
 }

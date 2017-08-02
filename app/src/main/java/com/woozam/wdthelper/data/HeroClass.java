@@ -7,7 +7,7 @@ import com.woozam.wdthelper.R;
 
 public enum HeroClass {
 
-    BB_M, BB_F, WZ_M, WZ_F, DH_M, DH_F, MK_M, MK_F, WD_M, WD_F, CR_M, CR_F;
+    BB_M, BB_F, WZ_M, WZ_F, DH_M, DH_F, MK_M, MK_F, WD_M, WD_F, CR_M, CR_F, NE_M, NE_F;
 
     public static final String BB = "barbarian";
     public static final String WZ = "wizard";
@@ -15,6 +15,7 @@ public enum HeroClass {
     public static final String MK = "monk";
     public static final String WD = "witch-doctor";
     public static final String CR = "crusader";
+    public static final String NE = "necromancer";
     public static final int MALE = 0;
     public static final int FEMALE = 1;
 
@@ -56,6 +57,12 @@ public enum HeroClass {
             } else if (gender == FEMALE) {
                 heroClass = CR_F;
             }
+        } else if (heroClassString.equals(NE)) {
+            if (gender == MALE) {
+                heroClass = NE_M;
+            } else if (gender == FEMALE) {
+                heroClass = NE_F;
+            }
         }
         return heroClass;
     }
@@ -82,6 +89,9 @@ public enum HeroClass {
             case WZ_F:
             case WZ_M:
                 return context.getString(R.string.wizard);
+            case NE_F:
+            case NE_M:
+                return context.getString(R.string.necromancer);
             default:
                 return "";
         }

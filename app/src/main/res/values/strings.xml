@@ -97,6 +97,7 @@
     <string name="monk">Monk</string>
     <string name="witch_doctor">Witch Doctor</string>
     <string name="wizard">Wizard</string>
+    <string name="necromancer">Necromancer</string>
     <string name="europe">Europe</string>
     <string name="korea">Korea</string>
     <string name="taiwan">Taiwan</string>
@@ -148,6 +149,9 @@
     <string name="season_3">Season 3</string>
     <string name="season_4">Season 4</string>
     <string name="season_5">Season 5</string>
+    <string name="season_6">Season 6</string>
+    <string name="season_7">Season 7</string>
+    <string name="season_8">Season 8</string>
     <string name="greater_rift_2_player">2 Player</string>
     <string name="greater_rift_3_player">3 Player</string>
     <string name="greater_rift_4_player">4 Player</string>
@@ -157,6 +161,7 @@
     <string name="greater_rift_monk">Monk</string>
     <string name="greater_rift_witch_doctor">Witch Doctor</string>
     <string name="greater_rift_wizard">Wizard</string>
+    <string name="greater_rift_necromancer">Necromancer</string>
     <string name="greater_rift_tier">%1$s\n%2$dTier</string>
     <string name="armor">Armor</string>
     <string name="damage">Damage</string>

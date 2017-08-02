@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public enum RiftType {
 
-	RIFT_BB, RIFT_CR, RIFT_DH, RIFT_MK, RIFT_WD, RIFT_WZ, RIFT_2, RIFT_3, RIFT_4;
+	RIFT_BB, RIFT_CR, RIFT_DH, RIFT_MK, RIFT_WD, RIFT_WZ, RIFT_NE, RIFT_2, RIFT_3, RIFT_4;
 
 	public String toString(boolean isHardcore) {
 		String format;
@@ -41,6 +41,9 @@ public enum RiftType {
 		case RIFT_WZ:
 			format = "rift-%swizard";
 			break;
+		case RIFT_NE:
+			format = "rift-%snecromancer";
+			break;
 		default:
 			format = "%s";
 			break;
@@ -69,6 +72,8 @@ public enum RiftType {
 			return context.getString(R.string.greater_rift_witch_doctor);
 		case RIFT_WZ:
 			return context.getString(R.string.greater_rift_wizard);
+		case RIFT_NE:
+			return context.getString(R.string.greater_rift_necromancer);
 		default:
 			return "";
 		}
@@ -83,6 +88,7 @@ public enum RiftType {
 		list.add(RIFT_MK);
 		list.add(RIFT_WD);
 		list.add(RIFT_CR);
+		list.add(RIFT_NE);
 		list.add(RIFT_2);
 		list.add(RIFT_3);
 		list.add(RIFT_4);

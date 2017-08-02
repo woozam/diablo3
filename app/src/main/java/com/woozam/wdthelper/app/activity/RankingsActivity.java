@@ -187,6 +187,7 @@ public class RankingsActivity extends AppCompatActivity implements Response.Erro
         if (position >= 0) {
             RankItem rankItem = mRankingsAdapter.getItem(position);
             ProfileActivity.createInstance(this, rankItem.getBattleTag());
+            HeroActivity.createInstance(this, rankItem.getBattleTag(), rankItem.getHeroId(), rankItem.getName());
         }
     }
 
@@ -266,6 +267,7 @@ public class RankingsActivity extends AppCompatActivity implements Response.Erro
                     rankItem.setRank(rank);
                     rankItem.setName(name);
                     rankItem.setBattleTag(new BattleTag(battleTag.split("/")[4], mServer));
+                    rankItem.setHeroId(Long.parseLong(battleTag.split("/")[6]));
                     rankItem.setIcon(icon);
                     rankItem.setRiftLevel(riftLevel);
                     rankItem.setRiftTime(riftTime);

@@ -9,6 +9,7 @@ public class RankItem extends AbsData {
     private int riftLevel;
     private String riftTime;
     private String completedTime;
+    private long heroId;
 
     public String getRank() {
         return rank;
@@ -64,5 +65,13 @@ public class RankItem extends AbsData {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public long getHeroId() {
+        return heroId;
+    }
+
+    public void setHeroId(long heroId) {
+        this.heroId = heroId;
     }
 }

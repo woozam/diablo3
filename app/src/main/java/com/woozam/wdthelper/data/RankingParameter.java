@@ -8,7 +8,7 @@ public class RankingParameter implements Serializable {
 
     public Server server = Server.KR;
     public RiftType type = RiftType.RIFT_4;
-    public RiftSeason season = RiftSeason.SEASON_5;
+    public RiftSeason season = RiftSeason.SEASON_8;
     public boolean isSeason = false;
     public boolean isHardcore = false;
 
@@ -24,7 +24,7 @@ public class RankingParameter implements Serializable {
         RankingParameter rankingParameter = new RankingParameter();
         rankingParameter.server = Server.valueOf(PreferenceUtils.getStringValue(PreferenceUtils.KEY_LAST_RANKING_PARAMETER_SERVER, Server.KR.name()));
         rankingParameter.type = RiftType.valueOf(PreferenceUtils.getStringValue(PreferenceUtils.KEY_LAST_RANKING_PARAMETER_TYPE, RiftType.RIFT_4.name()));
-        rankingParameter.season = RiftSeason.valueOf(PreferenceUtils.getStringValue(PreferenceUtils.KEY_LAST_RANKING_PARAMETER_SEASON, RiftSeason.SEASON_5.name()));
+        rankingParameter.season = RiftSeason.valueOf(PreferenceUtils.getStringValue(PreferenceUtils.KEY_LAST_RANKING_PARAMETER_SEASON, RiftSeason.SEASON_8.name()));
         rankingParameter.isSeason = PreferenceUtils.getBooleanValue(PreferenceUtils.KEY_LAST_RANKING_PARAMETER_SEASONAL, false);
         rankingParameter.isHardcore = PreferenceUtils.getBooleanValue(PreferenceUtils.KEY_LAST_RANKING_PARAMETER_HARDCORE, false);
         return rankingParameter;
